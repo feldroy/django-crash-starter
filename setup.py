@@ -10,7 +10,7 @@ except ImportError:
 
 # Our version ALWAYS matches the version of Django we support
 # If Django has a new release, we branch, tag, then update this setting after the tag.
-version = "2.2.1"
+version = "3"
 
 if sys.argv[-1] == "tag":
     os.system(f'git tag -a {version} -m "version {version}"')
@@ -21,13 +21,13 @@ with open("README.rst") as readme_file:
     long_description = readme_file.read()
 
 setup(
-    name="cookiecutter-django",
+    name="django-crash-starter",
     version=version,
-    description="A Cookiecutter template for creating production-ready Django projects quickly.",
+    description="django-crash-starter",
     long_description=long_description,
     author="Daniel Roy Greenfeld",
-    author_email="pydanny@gmail.com",
-    url="https://github.com/pydanny/cookiecutter-django",
+    author_email="daniel.roy.greenfeld@roygreenfeld.com",
+    url="https://github.com/roygreenfeld/django-crash-starter",
     packages=[],
     license="BSD",
     zip_safe=False,
