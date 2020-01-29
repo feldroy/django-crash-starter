@@ -30,10 +30,3 @@ Constraints
 
 -   Only maintained 3rd party libraries are used.
 -   Environment variables for configuration
-
-### pyup
-
-[![pyup](https://pyup.io/static/images/logo.png)](https://pyup.io/)
-
-Pyup brings you automated security and dependency updates used by Google
-and other organizations. Free for open source projects!
