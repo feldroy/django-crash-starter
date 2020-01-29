@@ -20,7 +20,7 @@ Please install `tox`_, which is a generic virtualenv management and test command
 
 `tox`_ is available for download from `PyPI`_ via `pip`_::
 
-    $ pip install tox
+    pip install tox
 
 It will automatically create a fresh virtual environment and install our test dependencies,
 such as `pytest-cookies`_ and `flake8`_.
@@ -34,18 +34,18 @@ For further information please consult the `pytest usage docs`_.
 
 To run all tests using various versions of python in virtualenvs defined in tox.ini, just run tox.::
 
-    $ tox
+    tox
 
 It is possible to test with a specific version of python. To do this, the command
 is::
 
-    $ tox -e py37
+    tox -e py38
 
 This will run py.test with the python3.7 interpreter, for example.
 
 To run a particular test with tox for against your current Python version::
 
-    $ tox -e py -- -k test_default_configuration
+    tox -e py -- -k test_default_configuration
 
 .. _`pytest usage docs`: https://pytest.org/latest/usage.html#specifying-tests-selecting-tests
 .. _`tox`: https://tox.readthedocs.io/en/latest/
