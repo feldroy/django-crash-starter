@@ -6,9 +6,10 @@ Always happy to get issues identified and pull requests!
 Getting your pull request merged in
 ------------------------------------
 
+#. New features will generally be rejected. This is a Cookiecutter template for a tutorial book, so we're keeping the scope small.
 #. Keep it small. The smaller the pull request the more likely I'll pull it in.
 #. Pull requests that fix a current issue get priority for review.
-#. If you're not already in the `CONTRIBUTORS.rst` file, add yourself!
+#. If you're not already in the `CONTRIBUTORS.md` file, add yourself!
 
 Testing
 -------
