@@ -28,5 +28,6 @@ Features
 Constraints
 -----------
 
--   Only maintained 3rd party libraries are used.
--   Environment variables for configuration
+- Very small scope. New feature pull requests will generally be rejected.
+- Only maintained 3rd party libraries are used.
+- Environment variables for configuration
