@@ -10,3 +10,7 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 ## [2020-01-28]
 ### Changed
 - Hard fork of Cookiecutter-Django project - [@pydanny](https://github.com/pydanny)
+
+## Before Hard Fork of CookiecutterDjango
+
+[Cookiecutter Django Changelog](https://github.com/pydanny/cookiecutter-django/blob/master/CHANGELOG.md)
