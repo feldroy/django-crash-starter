@@ -23,3 +23,5 @@ made.
 -   [edvm](https://github.com/edvm)
 
 From before the fork, the entire [Cookiecutter-Django team](https://github.com/pydanny/cookiecutter-django).
+
+|Emiliano Dalla Verde Marcozzi|[\@edvm](https://github.com/edvm)|
