@@ -13,7 +13,10 @@ These contributors have commit flags for the repository, and are able to accept 
 
 ## Other Code Contributors
 
+- [Modasser Billah](https://github.com/modasserbillah)
+
 Is this you?
+
 
 ## Issue Contributors
 
