@@ -14,6 +14,7 @@ These contributors have commit flags for the repository, and are able to accept 
 ## Other Code Contributors
 
 - [Modasser Billah](https://github.com/modasserbillah)
+- [Enrique Matías Sánchez](https://github.com/quique)
 
 Is this you?
 
