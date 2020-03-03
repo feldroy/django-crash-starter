@@ -2,7 +2,7 @@ django-crash-starter
 ====================
 
 Powered by [Cookiecutter](https://github.com/cookiecutter/cookiecutter), django-crash-starter is the project template
-for the [Django Crash Course tutorial book](https://www.roygreenfeld.com/products/django-crash-course) by Daniel and Audrey Roy Greenfeld.
+for the [Django Crash Course tutorial book](https://www.roygreenfeld.com/products/django-crash-course) by Daniel and Audrey Roy-Greenfeld.
 
 Features
 --------
