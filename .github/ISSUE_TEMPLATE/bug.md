@@ -14,8 +14,3 @@ about: Report a bug
 
 
 ## Steps to reproduce
-
-[//]: # (Any or all of the following:)
-[//]: # (* Host system configuration: OS, Docker & friends' versions etc.)
-[//]: # (* Replay file https://cookiecutter.readthedocs.io/en/latest/advanced/replay.html)
-[//]: # (* Logs)
