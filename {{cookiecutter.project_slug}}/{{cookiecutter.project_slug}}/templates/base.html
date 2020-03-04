@@ -80,7 +80,7 @@
       {% endif %}
 
       {% block content %}
-        <p>EveryCheese is the Ultimate Cheese Index! This text is inherited on other pages!</p>
+        <p>{% endraw %}{{ cookiecutter.description }}{% raw %} This text is inherited on other pages!</p>
       {% endblock content %}
 
     </div> <!-- /container -->
