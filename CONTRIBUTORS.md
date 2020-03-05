@@ -25,6 +25,7 @@ These individuals report issues that were closed after code changes were
 made.
 
 -   [edvm](https://github.com/edvm)
+-   [bmcneill](https://github.com/bfmcneill)
 
 From before the fork, the entire [Cookiecutter-Django team](https://github.com/pydanny/cookiecutter-django).
 
