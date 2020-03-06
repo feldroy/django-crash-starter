@@ -4,6 +4,7 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 ## [2020-03-05]
 ### Changed
 - Fixed misformatted unidecode version number - [@luzfcb](https://github.com/luzfcb)
+- Added a link to django-autoslug repository on the base.txt - [@luzfcb](https://github.com/luzfcb)
 
 ## [2020-02-18]
 ### Changed
