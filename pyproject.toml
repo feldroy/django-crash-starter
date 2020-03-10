@@ -1,0 +1,6 @@
+[tool.black]
+line-length = 67
+skip-string-normalization = true
+target-version = ['py38']
+exclude = "(.*/migrations/.*)"
+
