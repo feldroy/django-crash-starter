@@ -1,9 +1,9 @@
 import os
 import re
+import pathlib
 
 import pytest
 from cookiecutter.exceptions import FailedHookException
-from pytest_cases import pytest_fixture_plus
 import sh
 import yaml
 from binaryornot.check import is_binary
@@ -11,30 +11,34 @@ from binaryornot.check import is_binary
 PATTERN = r"{{(\s?cookiecutter)[.](.*?)}}"
 RE_OBJ = re.compile(PATTERN)
 
+PROJECT_DIR = pathlib.Path(__file__).parent.parent
+PYPROJECT_TOML = PROJECT_DIR / "pyproject.toml"
+
 
 @pytest.fixture
 def context():
     return {
         "project_name": "My Test Project",
         "project_slug": "my_test_project",
-        "author_name": "Test Author",
-        "email": "test@example.com",
         "description": "A short description of the project.",
+        "author_name": "Test Author",
         "domain_name": "example.com",
-        "version": "0.1.0",
+        "email": "test@example.com",
         "timezone": "UTC",
     }
 
 
-@pytest_fixture_plus
-@pytest.mark.parametrize("windows", ["y", "n"], ids=lambda yn: f"win:{yn}")
-def context_combination(
-    windows,
-):
-    """Fixture that parametrize the function where it's used."""
-    return {
-        "windows": windows,
-    }
+SUPPORTED_COMBINATIONS = [
+    {"windows": "y"},
+    {"windows": "n"},
+    {"database": "PostgreSQL"},
+    {"database": "SQLite"},
+]
+
+
+def _fixture_id(ctx):
+    """Helper to get a user friendly test name from the parametrized context."""
+    return "-".join(f"{key}:{value}" for key, value in ctx.items())
 
 
 def build_files_list(root_dir):
@@ -47,9 +51,7 @@ def build_files_list(root_dir):
 
 
 def check_paths(paths):
-    """Method to check all paths have correct substitutions,
-    used by other tests cases
-    """
+    """Method to check all paths have correct substitutions."""
     # Assert that no match is found in any of the files
     for path in paths:
         if is_binary(path):
@@ -61,13 +63,14 @@ def check_paths(paths):
             assert match is None, msg.format(path)
 
 
-def test_project_generation(cookies, context, context_combination):
-    """
-    Test that project is generated and fully rendered.
-
-    This is parametrized for each combination from ``context_combination`` fixture
-    """
-    result = cookies.bake(extra_context={**context, **context_combination})
+@pytest.mark.parametrize(
+    "context_override", SUPPORTED_COMBINATIONS, ids=_fixture_id
+)
+def test_project_generation(cookies, context, context_override):
+    """Test that project is generated and fully rendered."""
+    result = cookies.bake(
+        extra_context={**context, **context_override}
+    )
     assert result.exit_code == 0
     assert result.exception is None
     assert result.project.basename == context["project_slug"]
@@ -78,38 +81,41 @@ def test_project_generation(cookies, context, context_combination):
     check_paths(paths)
 
 
-@pytest.mark.flake8
-def test_flake8_passes(cookies, context_combination):
-    """
-    Generated project should pass flake8.
-
-    This is parametrized for each combination from ``context_combination`` fixture
-    """
-    result = cookies.bake(extra_context=context_combination)
+@pytest.mark.parametrize(
+    "context_override", SUPPORTED_COMBINATIONS, ids=_fixture_id
+)
+def test_flake8_passes(cookies, context_override):
+    """Generated project should pass flake8."""
+    result = cookies.bake(extra_context=context_override)
 
     try:
         sh.flake8(str(result.project))
     except sh.ErrorReturnCode as e:
-        pytest.fail(e)
+        pytest.fail(e.stdout.decode())
 
 
-@pytest.mark.black
-def test_black_passes(cookies, context_combination):
-    """
-    Generated project should pass black.
-
-    This is parametrized for each combination from ``context_combination`` fixture
-    """
-    result = cookies.bake(extra_context=context_combination)
+@pytest.mark.parametrize(
+    "context_override", SUPPORTED_COMBINATIONS, ids=_fixture_id
+)
+def test_black_passes(cookies, context_override):
+    """Generated project should pass black."""
+    result = cookies.bake(extra_context=context_override)
 
     try:
-        sh.black("--check", "--diff", "--exclude", "migrations", f"{result.project}/")
+        sh.black(
+            "--config",
+            str(PYPROJECT_TOML),
+            "--check",
+            "--diff",
+            "--exclude",
+            "migrations",
+            f"{result.project}/",
+        )
     except sh.ErrorReturnCode as e:
-        pytest.fail(e)
+        pytest.fail(e.stdout.decode())
 
 
 def test_travis_invokes_pytest(cookies, context):
-    context.update({"ci_tool": "Travis"})
     result = cookies.bake(extra_context=context)
 
     assert result.exit_code == 0
@@ -119,13 +125,14 @@ def test_travis_invokes_pytest(cookies, context):
 
     with open(f"{result.project}/.travis.yml", "r") as travis_yml:
         try:
-            assert yaml.load(travis_yml)["script"] == ["pytest"]
+            assert yaml.safe_load(travis_yml)["script"] == [
+                "pytest"
+            ]
         except yaml.YAMLError as e:
             pytest.fail(e)
 
 
 def test_gitlab_invokes_flake8_and_pytest(cookies, context):
-    context.update({"ci_tool": "Gitlab"})
     result = cookies.bake(extra_context=context)
 
     assert result.exit_code == 0
@@ -133,9 +140,11 @@ def test_gitlab_invokes_flake8_and_pytest(cookies, context):
     assert result.project.basename == context["project_slug"]
     assert result.project.isdir()
 
-    with open(f"{result.project}/.gitlab-ci.yml", "r") as gitlab_yml:
+    with open(
+        f"{result.project}/.gitlab-ci.yml", "r"
+    ) as gitlab_yml:
         try:
-            gitlab_config = yaml.load(gitlab_yml)
+            gitlab_config = yaml.safe_load(gitlab_yml)
             assert gitlab_config["flake8"]["script"] == ["flake8"]
             assert gitlab_config["pytest"]["script"] == ["pytest"]
         except yaml.YAMLError as e:
@@ -147,15 +156,6 @@ def test_invalid_slug(cookies, context, slug):
     """Invalid slug should failed pre-generation hook."""
     context.update({"project_slug": slug})
 
-    result = cookies.bake(extra_context=context)
-
-    assert result.exit_code != 0
-    assert isinstance(result.exception, FailedHookException)
-
-
-def test_no_whitenoise_and_no_cloud_provider(cookies, context):
-    """It should not generate project if neither whitenoise or cloud provider are set"""
-    context.update({"use_whitenoise": "n", "cloud_provider": "None"})
     result = cookies.bake(extra_context=context)
 
     assert result.exit_code != 0
