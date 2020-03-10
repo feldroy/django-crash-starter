@@ -1,8 +1,13 @@
 # Change Log
-All enhancements and patches to Cookiecutter Django will be documented in this file.
+All enhancements and patches to Django Crash Starter will be documented in this file.
 
-## [2020-03-09]
+## [2020-03-xx]
 ### Changed
+- Fix the test suite - [@luzfcb](https://github.com/luzfcb)
+- Cleanup the project and tests of the last unused traces of Cookiecutter Django - [@luzfcb](https://github.com/luzfcb)
+- Formatting with black following the rules defined on pyproject.toml - [@luzfcb](https://github.com/luzfcb)
+- Makes DATABASES section of the generated project compliant with pep8 - [@luzfcb](https://github.com/luzfcb)
+- Add pyproject.toml to configure black - [@luzfcb](https://github.com/luzfcb)
 - Update project configurations to use Python 3.8 - [@luzfcb](https://github.com/luzfcb)
 
 ## [2020-03-05]
