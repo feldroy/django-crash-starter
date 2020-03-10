@@ -17,10 +17,16 @@ matrix:
       script: tox -e py38
     - name: Black template
       script: tox -e black-template
-    - name: Bare metal
-      script: sh tests/test_bare.sh
+    - name: Bare metal with Postgresql
+      script: sh tests/test_bare.sh database=PostgreSQL windows=n
+      before_script:
+        - psql -c 'create database everycheese;' -U postgres
       services:
         - postgresql
+        - redis-server
+    - name: Bare metal with SQLite
+      script: sh tests/test_bare.sh database=SQLite windows=n
+      services:
         - redis-server
 
 install:
