@@ -1,6 +1,10 @@
 django-crash-starter
 ====================
 
+[![Build Status](https://travis-ci.com/roygreenfeld/django-crash-starter.svg?branch=master)](https://travis-ci.com/roygreenfeld/django-crash-starter)
+
+
+
 Powered by [Cookiecutter](https://github.com/cookiecutter/cookiecutter), django-crash-starter is the project template
 for the [Django Crash Course tutorial book](https://www.roygreenfeld.com/products/django-crash-course) by Daniel and Audrey Roy-Greenfeld.
 
