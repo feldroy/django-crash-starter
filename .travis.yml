@@ -16,23 +16,19 @@ jobs:
   include:
     - name: Test results
       script: tox -e py38
-    - name: Run flake8 on result
-      script: tox -e flake8
-    - name: Run black on result
-      script: tox -e black
     - name: Black template
       script: tox -e black-template
-    - name: Basic Docker
-      script: sh tests/test_docker.sh
-    - name: Docker with Celery
-      script: sh tests/test_docker.sh use_celery=y
-    - name: Bare metal
-      script: sh tests/test_bare.sh use_celery=y use_compressor=y
+    - name: Bare metal with Postgresql
+      script: sh tests/test_bare.sh database=PostgreSQL windows=n
+      before_script:
+        - psql -c 'create database everycheese;' -U postgres
       services:
         - postgresql
         - redis
-      env:
-        - CELERY_BROKER_URL=redis://localhost:6379/0
+    - name: Bare metal with SQLite
+      script: sh tests/test_bare.sh database=SQLite windows=n
+      services:
+        - redis
 
 install:
   - pip install tox
