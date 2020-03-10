@@ -43,19 +43,21 @@ LOCALE_PATHS = [ROOT_DIR.path("locale")]
 # DATABASES
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
-{% if cookiecutter.database == 'PostgreSQL' %}
+{% if cookiecutter.database == 'PostgreSQL' -%}
 DATABASES = {
-    "default": env.db("DATABASE_URL", default="postgres://{% if cookiecutter.windows == 'y' %}localhost{% endif %}/{{cookiecutter.project_slug}}")
+    "default": env.db(
+        "DATABASE_URL", default="postgres://{% if cookiecutter.windows == 'y' %}localhost{% endif %}/{{cookiecutter.project_slug}}"
+    )
 }
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
-{% else %}
+{%- else -%}
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(ROOT_DIR, 'db.sqlite3'),
     }
 }
-{% endif %}
+{%- endif %}
 
 
 # URLS
