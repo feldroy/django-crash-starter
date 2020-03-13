@@ -3,6 +3,7 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 
 ## [2020-03-xx]
 ### Changed
+- Renamed ROOT_DIR to BASE_DIR to follow the django `startproject` nomenclature [@luzfcb](https://github.com/luzfcb)
 - Replaced the usage of ugettext_lazy by gettext_lazy  [@luzfcb](https://github.com/luzfcb)
 - Added Django 3.0 asgi.py file [@luzfcb](https://github.com/luzfcb)
 - Added pyproject.toml to configure black [@luzfcb](https://github.com/luzfcb)
