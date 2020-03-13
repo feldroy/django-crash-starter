@@ -3,7 +3,29 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 
 ## [2020-03-xx]
 ### Changed
-- Update project configurations to use Python 3.8 - [@luzfcb](https://github.com/luzfcb)
+- Replaced the usage of ugettext_lazy by gettext_lazy  [@luzfcb](https://github.com/luzfcb)
+- Added Django 3.0 asgi.py file [@luzfcb](https://github.com/luzfcb)
+- Added pyproject.toml to configure black [@luzfcb](https://github.com/luzfcb)
+- Formatted the code with black following the rules defined on pyproject.toml [@luzfcb](https://github.com/luzfcb)
+- Fixed some flake8 formatting issues [@luzfcb](https://github.com/luzfcb)
+- Fixed and improve the test suite [@luzfcb](https://github.com/luzfcb) 
+- Updated .travis.yml to follow the new Travis cfg standard [@luzfcb](https://github.com/luzfcb)
+- Configured travis-ci to use Ubuntu 18.04 instead of 16.04 [@luzfcb](https://github.com/luzfcb)
+- Fixed formatting issues on DATABASES section to be able to generate project compliant with pep8 [@luzfcb](https://github.com/luzfcb)
+- Added Travis-ci Badge [@luzfcb](https://github.com/luzfcb)
+- Updated project configurations to use Python 3.8 [@luzfcb](https://github.com/luzfcb)
+- Updated django 3.0.4 [@luzfcb](https://github.com/luzfcb)
+- Updated pre-commit to 2.2.0 [@luzfcb](https://github.com/luzfcb)
+- Updated mypy to 0.661 [@luzfcb](https://github.com/luzfcb)
+- Updated werkzeug to 1.0.0 [@luzfcb](https://github.com/luzfcb)
+- Updated django-debug-toolbar to 2.2 [@luzfcb](https://github.com/luzfcb)
+- Updated pytest to 5.3.5 [@luzfcb](https://github.com/luzfcb)
+- Updated pylint-django to 2.0.14 [@luzfcb](https://github.com/luzfcb)
+- Updated django-crispy-forms to 1.9.0 [@luzfcb](https://github.com/luzfcb)
+- Updated django-debug-toolbar to 2.2 [@luzfcb](https://github.com/luzfcb)
+- Updated django-extensions to 2.2.8 [@luzfcb](https://github.com/luzfcb)
+- Updated ipdb to 0.13.2 [@luzfcb](https://github.com/luzfcb)
+- Updated collectfast to 2.1.0 [@luzfcb](https://github.com/luzfcb)
 
 ## [2020-03-05]
 ### Changed
