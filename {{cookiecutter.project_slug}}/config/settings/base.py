@@ -47,6 +47,8 @@ LOCALE_PATHS = [BASE_DIR.path("locale")]
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 {% if cookiecutter.database == 'PostgreSQL' -%}
 DATABASES = {
+    # Raises ImproperlyConfigured Exception
+    # if DATABASE_URL Not in os.environ
     "default": env.db(
         "DATABASE_URL", default="postgres://{% if cookiecutter.windows == 'y' %}localhost{% endif %}/{{cookiecutter.project_slug}}"
     )
