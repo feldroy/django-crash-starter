@@ -21,7 +21,7 @@ user_detail_view = UserDetailView.as_view()
 
 class UserUpdateView(LoginRequiredMixin, UpdateView):
     fields = [
-        'name',
+        "name",
     ]
 
     # We already imported user in the View code above,
