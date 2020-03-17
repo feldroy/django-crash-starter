@@ -3,6 +3,7 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 
 ## [2020-03-xx]
 ### Changed
+- Added a small script to install Postgresql 12 on Ubuntu [@luzfcb](https://github.com/luzfcb)
 - Explained the behavior when DATABASE_URL is not found [@luzfcb](https://github.com/luzfcb)
 - Renamed ROOT_DIR to BASE_DIR to follow the django `startproject` nomenclature [@luzfcb](https://github.com/luzfcb)
 - Replaced the usage of ugettext_lazy by gettext_lazy  [@luzfcb](https://github.com/luzfcb)
