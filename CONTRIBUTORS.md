@@ -6,8 +6,8 @@ These contributors have commit flags for the repository, and are able to accept 
 
 |Name|Github|
 |---|---|
-|Daniel Roy Greenfeld|[\@pydanny](https://github.com/pydanny)|
-|Audrey Roy Greenfeld|[\@audreyr](https://github.com/audreyr)|
+|Daniel Feldroy|[\@pydanny](https://github.com/pydanny)|
+|Audrey Feldroy|[\@audreyr](https://github.com/audreyr)|
 
 *Audrey is also the creator of Cookiecutter. Audrey and Daniel are on the Cookiecutter core team.*
 
