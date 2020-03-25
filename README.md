@@ -6,7 +6,9 @@ django-crash-starter
 
 
 Powered by [Cookiecutter](https://github.com/cookiecutter/cookiecutter), django-crash-starter is the project template
-for the [Django Crash Course tutorial book](https://www.feldroy.com/products/django-crash-course) by Daniel and Audrey Roy-Greenfeld.
+for the [Django Crash Course tutorial book](https://www.feldroy.com/products/django-crash-course) by Daniel and Audrey Feldroy.
+
+[![Django Crash Course: Covers Django 3.0 and Python 3.8](https://cdn.shopify.com/s/files/1/0304/6901/files/Django-Crash-Course-300x436.jpg)](https://www.feldroy.com/products/django-crash-course)
 
 Features
 --------
