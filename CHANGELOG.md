@@ -1,7 +1,7 @@
 # Change Log
 All enhancements and patches to Cookiecutter Django will be documented in this file.
 
-## [2020-03-xx]
+## [2020-04-03]
 ### Changed
 - Added a small script to install Visual Studio Code on Ubuntu [@luzfcb](https://github.com/luzfcb)
 - Added a small script to install Postgresql 12 on Ubuntu [@luzfcb](https://github.com/luzfcb)
