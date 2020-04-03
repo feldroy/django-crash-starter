@@ -1,4 +1,4 @@
-{% raw %}{% load static i18n compress %}<!DOCTYPE html>
+{% raw %}{% load static i18n %}<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -20,11 +20,9 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Your stuff: Third-party CSS libraries go here -->
-    {% compress css %}
     <!-- This file stores project-specific CSS -->
-  
+
     <link href="{% static 'css/project.css' %}" rel="stylesheet">
-    {% endcompress %}
     {% endblock %}
 
   </head>
@@ -97,12 +95,10 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
       <!-- Your stuff: Third-party javascript libraries go here -->
-      
+
 
       <!-- place project specific Javascript in this file -->
-      {% compress js %}
       <script src="{% static 'js/project.js' %}"></script>
-      {% endcompress %}
     {% endblock javascript %}
   </body>
 </html>

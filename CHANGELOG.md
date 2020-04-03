@@ -1,6 +1,10 @@
 # Change Log
 All enhancements and patches to Cookiecutter Django will be documented in this file.
 
+## [2020-04-xx]
+### Changed
+- Removed django-compressor to due install problems on Windows 10 [@luzfcb](https://github.com/luzfcb)
+
 ## [2020-04-03]
 ### Changed
 - Added a small script to install Visual Studio Code on Ubuntu [@luzfcb](https://github.com/luzfcb)
