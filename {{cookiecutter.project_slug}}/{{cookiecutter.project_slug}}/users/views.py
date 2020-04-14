@@ -12,6 +12,8 @@ User = get_user_model()
 
 class UserDetailView(LoginRequiredMixin, DetailView):
     model = User
+    # These Next Two Lines Tell the View to Index 
+    #   Lookups by Username
     slug_field = "username"
     slug_url_kwarg = "username"
 
