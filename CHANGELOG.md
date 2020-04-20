@@ -4,6 +4,7 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 ## [2020-04-xx]
 ### Changed
 - Fixed a small code style issue on UserDetailView [@luzfcb](https://github.com/luzfcb)
+- Added comments about slug_field and slug_url_kwarg usage on UserDetailView class - [@pydanny](https://github.com/pydanny)
 - Updated mypy to 0.770 [@luzfcb](https://github.com/luzfcb)
 - Removed django-compressor to due install problems on Windows 10 [@luzfcb](https://github.com/luzfcb)
 
