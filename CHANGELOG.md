@@ -3,6 +3,7 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 
 ## [2020-04-xx]
 ### Changed
+- Fixed a small code style issue on UserDetailView [@luzfcb](https://github.com/luzfcb)
 - Updated mypy to 0.770 [@luzfcb](https://github.com/luzfcb)
 - Removed django-compressor to due install problems on Windows 10 [@luzfcb](https://github.com/luzfcb)
 
