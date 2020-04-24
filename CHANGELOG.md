@@ -3,6 +3,7 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 
 ## [2020-04-xx]
 ### Changed
+- Added a small batch script to install Chocolatey on Windows - [@luzfcb](https://github.com/luzfcb)
 - Fixed a small code style issue on UserDetailView [@luzfcb](https://github.com/luzfcb)
 - Added comments about slug_field and slug_url_kwarg usage on UserDetailView class - [@pydanny](https://github.com/pydanny)
 - Updated mypy to 0.770 [@luzfcb](https://github.com/luzfcb)
