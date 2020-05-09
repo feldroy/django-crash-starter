@@ -1,7 +1,11 @@
 # Change Log
 All enhancements and patches to Cookiecutter Django will be documented in this file.
 
-## [2020-04-xx]
+## [2020-05-09]
+### Changed
+- Windows must use Sqlite - [@pydanny](https://github.com/pydanny)
+
+## [2020-04-29]
 ### Changed
 - Added a small batch script to install Chocolatey on Windows - [@luzfcb](https://github.com/luzfcb)
 - Fixed a small code style issue on UserDetailView [@luzfcb](https://github.com/luzfcb)
