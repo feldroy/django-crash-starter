@@ -18,7 +18,7 @@ django-test-plus==1.4.0  # https://github.com/revsys/django-test-plus
 # Code quality
 # ------------------------------------------------------------------------------
 flake8==3.7.9  # https://github.com/PyCQA/flake8
-coverage==5.0.4  # https://github.com/nedbat/coveragepy
+coverage==5.1  # https://github.com/nedbat/coveragepy
 black==19.10b0  # https://github.com/ambv/black
 pylint-django==2.0.14  # https://github.com/PyCQA/pylint-django
 pre-commit==2.2.0  # https://github.com/pre-commit/pre-commit
