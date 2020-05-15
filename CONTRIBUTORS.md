@@ -26,6 +26,7 @@ made.
 
 -   [edvm](https://github.com/edvm)
 -   [bmcneill](https://github.com/bfmcneill)
+-   [Nikita Shupeyko](https://github.com/webyneter)
 
 From before the fork, the entire [Cookiecutter-Django team](https://github.com/pydanny/cookiecutter-django).
 
