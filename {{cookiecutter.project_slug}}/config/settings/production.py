@@ -67,6 +67,9 @@ STATICFILES_STORAGE = (
     "whitenoise.storage.CompressedManifestStaticFilesStorage"
 )
 
+# https://github.com/antonagestam/collectfast#upload-strategies
+COLLECTFAST_STRATEGY = "collectfast.strategies.filesystem.FileSystemStrategy"
+
 # MEDIA
 # ------------------------------------------------------------------------------
 
