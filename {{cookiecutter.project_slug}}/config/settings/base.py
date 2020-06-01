@@ -45,24 +45,27 @@ LOCALE_PATHS = [BASE_DIR.path("locale")]
 # DATABASES
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
-{% if cookiecutter.windows == 'n' -%}
-DATABASES = {
-    # Raises ImproperlyConfigured Exception
-    # if DATABASE_URL Not in os.environ
-    "default": env.db(
-        "DATABASE_URL", default="postgres://{% if cookiecutter.windows == 'y' %}localhost{% endif %}/{{cookiecutter.project_slug}}"
-    )
-}
-DATABASES["default"]["ATOMIC_REQUESTS"] = True
-{%- else -%}
+{% if cookiecutter.windows == 'y' or cookiecutter.database == "SQLite" -%}
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'everycheese.db'),
     }
 }
+{%- else -%}
+DATABASES = {
+    # Raises ImproperlyConfigured Exception
+    # if DATABASE_URL Not in os.environ and
+    # the "default" argument is not defined.
+    # The DATABASE_URL environment variables
+    # expect a value in the following format:
+    # DATABASE_URL=postgres://user:password@hostname_or_ip:port/database_name
+    "default": env.db(
+        "DATABASE_URL", default="postgres:///{{cookiecutter.project_slug}}"
+    )
+}
 {%- endif %}
-
+DATABASES["default"]["ATOMIC_REQUESTS"] = True
 
 # URLS
 # ------------------------------------------------------------------------------
