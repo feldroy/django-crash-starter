@@ -1,6 +1,16 @@
 # Change Log
 All enhancements and patches to Cookiecutter Django will be documented in this file.
 
+## [2020-06-01]
+### Changed
+- Fixed the project generation when select database=SQLite and windows=n - [@luzfcb](https://github.com/luzfcb)
+- Applyed black formatting on production.py - [@luzfcb](https://github.com/luzfcb)
+- Small fixes in the project generation tests - [@luzfcb](https://github.com/luzfcb)
+- Updated pytest to 5.4.2 - [@luzfcb](https://github.com/luzfcb)
+- Updated flake8 to 3.8.2 - [@luzfcb](https://github.com/luzfcb)
+- Updated pylint-django to 2.0.15 - [@luzfcb](https://github.com/luzfcb)
+- Updated pre-commit to 2.4.0 - [@luzfcb](https://github.com/luzfcb)
+
 ## [2020-05-09]
 ### Changed
 - Windows must use Sqlite - [@pydanny](https://github.com/pydanny)
