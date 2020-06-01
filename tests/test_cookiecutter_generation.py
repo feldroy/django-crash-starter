@@ -11,7 +11,7 @@ from binaryornot.check import is_binary
 PATTERN = r"{{(\s?cookiecutter)[.](.*?)}}"
 RE_OBJ = re.compile(PATTERN)
 
-PROJECT_DIR = pathlib.Path(__file__).parent.parent
+PROJECT_DIR = pathlib.Path(__file__).resolve().parent.parent
 PYPROJECT_TOML = PROJECT_DIR / "pyproject.toml"
 
 
@@ -87,9 +87,10 @@ def test_project_generation(cookies, context, context_override):
 def test_flake8_passes(cookies, context_override):
     """Generated project should pass flake8."""
     result = cookies.bake(extra_context=context_override)
+    result_project_dir = f"{result._project_dir}"
 
     try:
-        sh.flake8(str(result.project))
+        sh.flake8(str(result.project), _cwd=result_project_dir)
     except sh.ErrorReturnCode as e:
         pytest.fail(e.stdout.decode())
 
@@ -100,7 +101,7 @@ def test_flake8_passes(cookies, context_override):
 def test_black_passes(cookies, context_override):
     """Generated project should pass black."""
     result = cookies.bake(extra_context=context_override)
-
+    result_project_dir = f"{result._project_dir}"
     try:
         sh.black(
             "--config",
@@ -110,6 +111,7 @@ def test_black_passes(cookies, context_override):
             "--exclude",
             "migrations",
             f"{result.project}/",
+            _cwd=result_project_dir,
         )
     except sh.ErrorReturnCode as e:
         pytest.fail(e.stdout.decode())
