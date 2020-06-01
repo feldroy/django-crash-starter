@@ -68,7 +68,9 @@ STATICFILES_STORAGE = (
 )
 
 # https://github.com/antonagestam/collectfast#upload-strategies
-COLLECTFAST_STRATEGY = "collectfast.strategies.filesystem.FileSystemStrategy"
+COLLECTFAST_STRATEGY = (
+    "collectfast.strategies.filesystem.FileSystemStrategy"
+)
 
 # MEDIA
 # ------------------------------------------------------------------------------
