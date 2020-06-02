@@ -2,7 +2,7 @@
 # see https://pyup.io/docs/configuration/ for all available options
 
 update: true
-schedule: "every week"
+#schedule: "every week"
 label_prs: "dependency update"
 assignees:
  - luzfcb
