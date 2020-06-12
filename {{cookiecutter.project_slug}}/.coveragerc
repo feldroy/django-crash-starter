@@ -1,5 +1,6 @@
 [run]
 include = {{cookiecutter.project_slug}}/*
 omit = *migrations*, *tests*
+disable_warnings = module-not-imported, module-not-measured, already-imported
 plugins =
     django_coverage_plugin
