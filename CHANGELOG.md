@@ -1,6 +1,28 @@
 # Change Log
 All enhancements and patches to Cookiecutter Django will be documented in this file.
 
+## [2020-07-02]
+### Changed
+- Migrate to pathlib - [@luzfcb](https://github.com/luzfcb)
+
+## [2020-06-29]
+### Changed
+- Update tox to 3.16.0 - [@luzfcb](https://github.com/luzfcb)
+
+## [2020-06-22]
+### Changed
+- Switch to dark navbar - [@pydanny](https://github.com/pydanny)
+
+## [2020-06-18]
+### Changed
+- Update flake8 to 3.8.3 - [@luzfcb](https://github.com/luzfcb)
+- Update pytest to 5.4.3 - [@luzfcb](https://github.com/luzfcb)
+
+## [2020-06-12]
+### Changed
+- Small fixes in the .coveragerc file - [@pydanny](https://github.com/pydanny)
+
+
 ## [2020-06-01]
 ### Changed
 - Fixed the project generation when select database=SQLite and windows=n - [@luzfcb](https://github.com/luzfcb)
