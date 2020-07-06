@@ -12,12 +12,10 @@ APPS_DIR = BASE_DIR / "{{ cookiecutter.project_slug }}"
 
 env = environ.Env()
 
-READ_DOT_ENV_FILE = env.bool(
-    "DJANGO_READ_DOT_ENV_FILE", default=False
-)
-if READ_DOT_ENV_FILE:
+ENV_FILE = BASE_DIR / ".env"
+if Path(ENV_FILE).exists():
     # OS environment variables take precedence over variables from .env
-    env.read_env(str(BASE_DIR / ".env"))
+    env.read_env(str(ENV_FILE))
 
 # GENERAL
 # ------------------------------------------------------------------------------
