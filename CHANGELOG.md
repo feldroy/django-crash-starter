@@ -1,13 +1,20 @@
 # Change Log
 All enhancements and patches to Cookiecutter Django will be documented in this file.
 
+## [2020-07-06]
+### Changed
+- Updated tox to 3.16.1 - [@luzfcb](https://github.com/luzfcb)
+- Updated pillow to 7.2.0 - [@luzfcb](https://github.com/luzfcb)
+- Updated python-slugify to 4.0.1 - [@luzfcb](https://github.com/luzfcb)
+- Updated Django to 3.0.8 - [@luzfcb](https://github.com/luzfcb)
+
 ## [2020-07-02]
 ### Changed
 - Migrate to pathlib - [@luzfcb](https://github.com/luzfcb)
 
 ## [2020-06-29]
 ### Changed
-- Update tox to 3.16.0 - [@luzfcb](https://github.com/luzfcb)
+- Updated tox to 3.16.0 - [@luzfcb](https://github.com/luzfcb)
 
 ## [2020-06-22]
 ### Changed
@@ -15,8 +22,8 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 
 ## [2020-06-18]
 ### Changed
-- Update flake8 to 3.8.3 - [@luzfcb](https://github.com/luzfcb)
-- Update pytest to 5.4.3 - [@luzfcb](https://github.com/luzfcb)
+- Updated flake8 to 3.8.3 - [@luzfcb](https://github.com/luzfcb)
+- Updated pytest to 5.4.3 - [@luzfcb](https://github.com/luzfcb)
 
 ## [2020-06-12]
 ### Changed
