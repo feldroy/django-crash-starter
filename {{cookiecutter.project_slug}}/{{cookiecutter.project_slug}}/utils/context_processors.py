@@ -2,4 +2,5 @@ from django.conf import settings
 
 
 def settings_context(_request):
-    return {"settings": settings}
+    # Put global template variables here.
+    return {"DEBUG": settings.DEBUG} # explicit 
