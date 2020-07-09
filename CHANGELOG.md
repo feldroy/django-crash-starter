@@ -1,9 +1,13 @@
 # Change Log
 All enhancements and patches to Cookiecutter Django will be documented in this file.
 
+## [2020-07-08]
+### Changed
+- Explicitly define which settings variables should be included in the template context - [@pydanny](https://github.com/pydanny)
+
 ## [2020-07-06]
 ### Changed
-- Automatically read an .env file, if it exists in the project's root path - [@luzfcb] (https://github.com/luzfcb)
+- Automatically read an .env file, if it exists in the project's root path - [@luzfcb](https://github.com/luzfcb)
 - Updated tox to 3.16.1 - [@luzfcb](https://github.com/luzfcb)
 - Updated pillow to 7.2.0 - [@luzfcb](https://github.com/luzfcb)
 - Updated python-slugify to 4.0.1 - [@luzfcb](https://github.com/luzfcb)
