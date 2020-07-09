@@ -1,6 +1,10 @@
 # Change Log
 All enhancements and patches to Cookiecutter Django will be documented in this file.
 
+## [2020-07-09]
+### Changed
+- Fix the Sqlite database filename when generate the project with `windows=y` - [@luzfcb] (https://github.com/luzfcb)
+
 ## [2020-07-08]
 ### Changed
 - Explicitly define which settings variables should be included in the template context - [@pydanny](https://github.com/pydanny)

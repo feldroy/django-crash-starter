@@ -46,7 +46,7 @@ LOCALE_PATHS = [str(BASE_DIR / "locale")]
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': str(BASE_DIR / 'everycheese.db'),
+        'NAME': str(BASE_DIR / '{{cookiecutter.project_slug}}.db'),
     }
 }
 {%- else -%}
