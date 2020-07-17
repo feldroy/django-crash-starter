@@ -319,3 +319,9 @@ tags
 {{ cookiecutter.project_slug }}/media/
 
 .pytest_cache/
+
+# ignore sqlite databases
+*.db
+*.sqlite
+*.sqlite3
+
