@@ -1,6 +1,10 @@
 # Change Log
 All enhancements and patches to Cookiecutter Django will be documented in this file.
 
+## [2020-08-28]
+### Changed
+- Added basic instructions on the README.md - [@luzfcb](https://github.com/luzfcb)
+
 ## [2020-07-17]
 ### Changed
 - Ignore sqlite database on git - [@luzfcb](https://github.com/luzfcb)
