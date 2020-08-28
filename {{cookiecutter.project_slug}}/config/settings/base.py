@@ -44,10 +44,10 @@ LOCALE_PATHS = [str(BASE_DIR / "locale")]
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 {% if cookiecutter.windows == 'y' or cookiecutter.database == "SQLite" -%}
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': str(BASE_DIR / '{{cookiecutter.project_slug}}.db'),
-    }
+    "default": env.db(
+        "DATABASE_URL",
+        default=f"sqlite:///{str(BASE_DIR / '{{cookiecutter.project_slug}}.db')}",
+    )
 }
 {%- else -%}
 DATABASES = {
@@ -58,7 +58,7 @@ DATABASES = {
     # expect a value in the following format:
     # DATABASE_URL=postgres://user:password@hostname_or_ip:port/database_name
     "default": env.db(
-        "DATABASE_URL", default="postgres:///{{cookiecutter.project_slug}}"
+        "DATABASE_URL", default="postgres:///{{cookiecutter.project_slug}}",
     )
 }
 {%- endif %}
