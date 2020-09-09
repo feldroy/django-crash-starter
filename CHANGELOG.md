@@ -5,6 +5,10 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 ### Changed
 - Removed env.sample file - [@luzfcb](https://github.com/luzfcb)
 - Updated basic instructions on the README.md - [@luzfcb](https://github.com/luzfcb)
+- Updated project to Django 3.1 - [@luzfcb](https://github.com/luzfcb)
+- Synced contrib/sites app 0001_initial migration to follow Django 3.1 changes - [@luzfcb](https://github.com/luzfcb)
+- Synced users app 0001_initial migration to follow Django 3.1 changes - [@luzfcb](https://github.com/luzfcb)
+
 
 ## [2020-09-08]
 ### Changed

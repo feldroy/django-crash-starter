@@ -31,12 +31,12 @@ class Migration(migrations.Migration):
                 ("name", models.CharField(max_length=50, verbose_name="display name")),
             ],
             options={
-                "ordering": ("domain",),
+                "ordering": ["domain"],
                 "db_table": "django_site",
                 "verbose_name": "site",
                 "verbose_name_plural": "sites",
             },
             bases=(models.Model,),
-            managers=[("objects", django.contrib.sites.models.SiteManager())],
-        )
+            managers=[("objects", django.contrib.sites.models.SiteManager()), ],
+        ),
     ]

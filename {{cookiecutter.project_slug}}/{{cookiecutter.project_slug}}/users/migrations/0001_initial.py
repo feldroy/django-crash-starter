@@ -8,7 +8,9 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [("auth", "0008_alter_user_username_max_length")]
+    dependencies = [
+        ("auth", "0012_alter_user_first_name_max_length"),
+    ]
 
     operations = [
         migrations.CreateModel(
@@ -56,7 +58,7 @@ class Migration(migrations.Migration):
                 (
                     "first_name",
                     models.CharField(
-                        blank=True, max_length=30, verbose_name="first name"
+                        blank=True, max_length=150, verbose_name="first name"
                     ),
                 ),
                 (
@@ -127,6 +129,6 @@ class Migration(migrations.Migration):
                 "verbose_name": "user",
                 "abstract": False,
             },
-            managers=[("objects", django.contrib.auth.models.UserManager())],
-        )
+            managers=[("objects", django.contrib.auth.models.UserManager()), ],
+        ),
     ]
