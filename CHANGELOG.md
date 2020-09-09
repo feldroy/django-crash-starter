@@ -1,6 +1,11 @@
 # Change Log
 All enhancements and patches to Cookiecutter Django will be documented in this file.
 
+## [2020-09-08]
+### Changed
+- Added env.sample.mac_or_linux and env.sample.windows files - [@pydanny](https://github.com/pydanny)
+- Added .env file on gitignore - [@pydanny](https://github.com/pydanny)
+
 ## [2020-08-28]
 ### Changed
 - Added basic instructions on the README.md - [@luzfcb](https://github.com/luzfcb)
