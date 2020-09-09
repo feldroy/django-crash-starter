@@ -66,6 +66,8 @@ target/
 .venv
 venv/
 ENV/
+
+# For security reasons, the .env file should never be included in git
 .env
 
 # Rope project settings

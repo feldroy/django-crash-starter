@@ -42,13 +42,13 @@ pip install -r requirements\local.txt
 On Linux and Mac
 
 ```bash
-cp env.sample .env
+cp env.sample.mac_or_linux .env
 ```
 
 On Windows
 
 ```bash
-copy env.sample .env
+copy env.sample.windows .env
 ```
 
 Change the value of the variable `DATABASE_URL` inside the file` .env` with the information of the database we want to connect.
