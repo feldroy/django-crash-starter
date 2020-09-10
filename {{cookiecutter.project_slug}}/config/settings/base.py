@@ -58,7 +58,8 @@ DATABASES = {
     # expect a value in the following format:
     # DATABASE_URL=postgres://user:password@hostname_or_ip:port/database_name
     "default": env.db(
-        "DATABASE_URL", default="postgres:///{{cookiecutter.project_slug}}",
+        "DATABASE_URL",
+        default="postgres:///{{cookiecutter.project_slug}}",
     )
 }
 {%- endif %}
