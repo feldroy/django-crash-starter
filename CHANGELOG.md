@@ -8,6 +8,13 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 - Updated project to Django 3.1 - [@luzfcb](https://github.com/luzfcb)
 - Synced contrib/sites app 0001_initial migration to follow Django 3.1 changes - [@luzfcb](https://github.com/luzfcb)
 - Synced users app 0001_initial migration to follow Django 3.1 changes - [@luzfcb](https://github.com/luzfcb)
+- Updated black to 20.8b1 - [@luzfcb](https://github.com/luzfcb)
+- Updated project compatibility with black v20.8b1 - [@luzfcb](https://github.com/luzfcb)
+- Updated tox to 3.20.0 - [@luzfcb](https://github.com/luzfcb)
+- Updated pytest-xdist to 2.1.0 - [@luzfcb](https://github.com/luzfcb)
+- Updated pytest to 6.0.1 - [@luzfcb](https://github.com/luzfcb)
+- Updated psycopg2 to 2.8.6 - [@luzfcb](https://github.com/luzfcb)
+- Updated sh to 1.14.0 - [@luzfcb](https://github.com/luzfcb)
 
 
 ## [2020-09-08]
@@ -18,6 +25,26 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 ## [2020-08-28]
 ### Changed
 - Added basic instructions on the README.md - [@luzfcb](https://github.com/luzfcb)
+
+## [2020-08-10]
+### Changed
+- Updated whitenoise to 5.2.0 - [@luzfcb](https://github.com/luzfcb)
+- Updated tox to 3.19.0 - [@luzfcb](https://github.com/luzfcb)
+- Updated django-anymail to 7.2.1 - [@luzfcb](https://github.com/luzfcb)
+
+
+## [2020-08-03]
+### Changed
+- Updated Django to 3.0.9 - [@luzfcb](https://github.com/luzfcb)
+- Updated tox to 3.18.1 - [@luzfcb](https://github.com/luzfcb)
+- Updated pytest-xdist to 1.34.0 - [@luzfcb](https://github.com/luzfcb)
+
+## [2020-07-27]
+### Changed
+- Updated django-autoslug to 1.9.8 - [@luzfcb](https://github.com/luzfcb)
+- Updated tox to 3.18.0 - [@luzfcb](https://github.com/luzfcb)
+- Updated django-anymail to 7.2 - [@luzfcb](https://github.com/luzfcb)
+- Updated django-autoslug to 1.9.8 - [@luzfcb](https://github.com/luzfcb)
 
 ## [2020-07-17]
 ### Changed
