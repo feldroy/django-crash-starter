@@ -1,6 +1,10 @@
 # Change Log
 All enhancements and patches to Cookiecutter Django will be documented in this file.
 
+## [2020-09-10]
+### Changed
+- Added a workaround on config/settings/test.py to fix the coverage.py + django_coverage_plugin "Can't add file tracer data for unmeasured file" warning message (https://github.com/feldroy/django-crash-course/issues/329) - [@luzfcb](https://github.com/luzfcb)
+
 ## [2020-09-09]
 ### Changed
 - Removed env.sample file - [@luzfcb](https://github.com/luzfcb)
