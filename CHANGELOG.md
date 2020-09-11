@@ -3,6 +3,8 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 
 ## [2020-09-11]
 ### Changed
+- Updated factory-boy to 3.0.1 - [@luzfcb](https://github.com/luzfcb)
+- Updated project compatibility with factory-boy v3.0.1 - [@luzfcb](https://github.com/luzfcb)
 - Updated black to 20.8b1 - [@luzfcb](https://github.com/luzfcb)
 - Updated ipdb to 0.13.3 - [@luzfcb](https://github.com/luzfcb)
 - Updated psycopg2-binary to 2.8.6 - [@luzfcb](https://github.com/luzfcb)
