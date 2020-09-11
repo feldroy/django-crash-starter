@@ -1,6 +1,19 @@
 # Change Log
 All enhancements and patches to Cookiecutter Django will be documented in this file.
 
+## [2020-09-11]
+### Changed
+- Updated black to 20.8b1 - [@luzfcb](https://github.com/luzfcb)
+- Updated ipdb to 0.13.3 - [@luzfcb](https://github.com/luzfcb)
+- Updated psycopg2-binary to 2.8.6 - [@luzfcb](https://github.com/luzfcb)
+- Updated pytest to 6.0.1 - [@luzfcb](https://github.com/luzfcb)
+- Updated pytest-sugar to 0.9.4 - [@luzfcb](https://github.com/luzfcb)
+- Updated flake8 to 3.8.3 - [@luzfcb](https://github.com/luzfcb)
+- Updated coverage to 5.2.1 - [@luzfcb](https://github.com/luzfcb)
+- Updated pylint-django to 2.3.0 - [@luzfcb](https://github.com/luzfcb)
+- Updated pre-commit to 2.7.1 - [@luzfcb](https://github.com/luzfcb)
+- Updated django-extensions to 3.0.8 - [@luzfcb](https://github.com/luzfcb)
+
 ## [2020-09-10]
 ### Changed
 - Added a workaround on config/settings/test.py to fix the coverage.py + django_coverage_plugin "Can't add file tracer data for unmeasured file" warning message (https://github.com/feldroy/django-crash-course/issues/329) - [@luzfcb](https://github.com/luzfcb)
