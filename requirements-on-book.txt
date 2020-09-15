@@ -1,0 +1,2 @@
+# Dependencies that was manually added on the book
+django-countries==6.1.3
