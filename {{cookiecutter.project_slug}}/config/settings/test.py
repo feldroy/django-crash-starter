@@ -43,10 +43,6 @@ TEMPLATES[-1]["OPTIONS"]["loaders"] = [  # type: ignore[index] # noqa: F405
         ],
     )
 ]
-# Workaround to:
-# https://github.com/nedbat/coveragepy/issues/1011
-# https://github.com/nedbat/django_coverage_plugin/issues/69
-TEMPLATES[-1]["OPTIONS"]["debug"] = True  # type: ignore[index] # noqa: F405
 
 # EMAIL
 # ------------------------------------------------------------------------------
