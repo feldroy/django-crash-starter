@@ -6,7 +6,8 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 ### Changed
 - Updated coverage to 5.3 - [@luzfcb](https://github.com/luzfcb)
 - Removed the coverage workaround on config/settings/test.py. The coverage 5.3 fixed the issue - [@luzfcb](https://github.com/luzfcb)
-- Update pytest-django to 3.10.0 - [@luzfcb](https://github.com/luzfcb)
+- Updated pytest-django to 3.10.0 - [@luzfcb](https://github.com/luzfcb)
+- Updated django-redis to 4.12.1 - [@luzfcb](https://github.com/luzfcb)
 
 ## [2020-09-15]
 ### Changed
