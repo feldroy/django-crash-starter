@@ -1,6 +1,12 @@
 # Change Log
 All enhancements and patches to Cookiecutter Django will be documented in this file.
 
+
+## [2020-09-15]
+### Changed
+- Updated django-anymail to 8.0 - [@luzfcb](https://github.com/luzfcb)
+- Updated pytest to 6.0.2 - [@luzfcb](https://github.com/luzfcb)
+
 ## [2020-09-11]
 ### Changed
 - Updated factory-boy to 3.0.1 - [@luzfcb](https://github.com/luzfcb)
