@@ -4,6 +4,7 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 ## [2020-09-22]
 ### Changed
 - Updated django-debug-toolbar to 3.1 - [@luzfcb](https://github.com/luzfcb)
+- Updated django-extensions to 3.0.9 - [@luzfcb](https://github.com/luzfcb)
 
 
 ## [2020-09-16]
