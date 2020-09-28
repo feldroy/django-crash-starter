@@ -11,7 +11,7 @@ psycopg2-binary==2.8.6  # https://github.com/psycopg/psycopg2
 mypy==0.770, <0.780 # https://github.com/python/mypy
 # mypy >0.770 and <0.780 is required by django-stubs==1.5.0
 django-stubs==1.5.0  # https://github.com/typeddjango/django-stubs
-pytest==6.0.2  # https://github.com/pytest-dev/pytest
+pytest==6.1.0  # https://github.com/pytest-dev/pytest
 pytest-sugar==0.9.4  # https://github.com/Frozenball/pytest-sugar
 django-test-plus==1.4.0  # https://github.com/revsys/django-test-plus
 
