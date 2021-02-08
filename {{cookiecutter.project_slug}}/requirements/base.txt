@@ -3,7 +3,7 @@ python-slugify==4.0.1  # https://github.com/un33k/python-slugify
 Pillow==7.2.0  # https://github.com/python-pillow/Pillow
 argon2-cffi==20.1.0  # https://github.com/hynek/argon2_cffi
 whitenoise==5.2.0  # https://github.com/evansd/whitenoise
-unidecode==1.1.1 # https://pypi.org/project/Unidecode/
+unidecode==1.2.0 # https://pypi.org/project/Unidecode/
 
 # Django
 # ------------------------------------------------------------------------------
