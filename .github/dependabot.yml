@@ -1,0 +1,76 @@
+version: 2
+updates:
+- package-ecosystem: pip
+  directory: "/"
+  schedule:
+    interval: weekly
+    time: "13:00"
+  open-pull-requests-limit: 10
+  assignees:
+  - luzfcb
+  labels:
+  - dependency update
+  ignore:
+  - dependency-name: flake8
+    versions:
+    - 3.8.4
+    - 3.9.0
+  - dependency-name: pillow
+    versions:
+    - 8.1.0
+    - 8.1.2
+  - dependency-name: django-crispy-forms
+    versions:
+    - 1.10.0
+    - 1.11.0
+    - 1.11.1
+  - dependency-name: tox
+    versions:
+    - 3.21.2
+    - 3.21.3
+    - 3.21.4
+    - 3.22.0
+  - dependency-name: django
+    versions:
+    - 3.1.5
+    - 3.1.6
+  - dependency-name: pytest
+    versions:
+    - 6.2.1
+    - 6.2.2
+  - dependency-name: pytz
+    versions:
+    - "2020.5"
+  - dependency-name: django-anymail[mailgun]
+    versions:
+    - "8.1"
+- package-ecosystem: pip
+  directory: "/{{cookiecutter.project_slug}}/requirements"
+  schedule:
+    interval: weekly
+    time: "13:00"
+  open-pull-requests-limit: 10
+  assignees:
+  - luzfcb
+  labels:
+  - dependency update
+  ignore:
+  - dependency-name: pillow
+    versions:
+    - 8.1.0
+    - 8.1.2
+  - dependency-name: django-crispy-forms
+    versions:
+    - 1.10.0
+    - 1.11.0
+    - 1.11.1
+  - dependency-name: django
+    versions:
+    - 3.1.5
+    - 3.1.6
+  - dependency-name: pytz
+    versions:
+    - "2020.5"
+  - dependency-name: unidecode
+    versions:
+    - 1.1.2
